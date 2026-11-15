@@ -1,0 +1,93 @@
+{
+ "summary": {
+  "total_mass_g": 507,
+  "com_mm": [
+   -12.4,
+   0.4,
+   60.4
+  ],
+  "com_with_treats_mm": [
+   -10.7,
+   0.4,
+   60.8
+  ],
+  "front_caster_load_pct": 8.2,
+  "front_caster_load_pct_with_treats": 10.7,
+  "molded_parts": 12,
+  "unique_tools": 11,
+  "length_mm": 173,
+  "width_mm": 145,
+  "height_sleep_mm": 192,
+  "height_sentinel_mm": 272,
+  "static_clashes": 0,
+  "mast_travel_clashes": 0,
+  "components": 57
+ },
+ "parts": [
+  {
+   "part": "chassis",
+   "grams": 100.8,
+   "material": "ABS/PC, warm taupe"
+  },
+  {
+   "part": "light_band",
+   "grams": 7.5,
+   "material": "Clear PC, frosted"
+  },
+  {
+   "part": "top_shell",
+   "grams": 112.1,
+   "material": "ABS/PC, sand"
+  },
+  {
+   "part": "treat_cup",
+   "grams": 15.7,
+   "material": "PP, food-contact grade"
+  },
+  {
+   "part": "cup_lid",
+   "grams": 5.3,
+   "material": "PC tinted smoke"
+  },
+  {
+   "part": "rotor",
+   "grams": 6.1,
+   "material": "POM (acetal)"
+  },
+  {
+   "part": "mast",
+   "grams": 19.5,
+   "material": "POM or PA12-GF, rack molded in"
+  },
+  {
+   "part": "head_rear",
+   "grams": 29.7,
+   "material": "ABS/PC, sand"
+  },
+  {
+   "part": "head_front",
+   "grams": 11.1,
+   "material": "ABS/PC, espresso gloss"
+  },
+  {
+   "part": "wheel_l",
+   "grams": 17.3,
+   "material": "ABS hub"
+  },
+  {
+   "part": "tire_l",
+   "grams": 14.8,
+   "material": "TPU 85A tyre"
+  },
+  {
+   "part": "wheel_r",
+   "grams": 17.3,
+   "material": "ABS hub"
+  },
+  {
+   "part": "tire_r",
+   "grams": 14.8,
+   "material": "TPU 85A tyre"
+  }
+ ]
+}
