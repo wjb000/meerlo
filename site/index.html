@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Meerlo: the pet that pet-sits | 3D design viewer</title>
+<meta name="description" content="Meerlo is a small autonomous home robot that is a lovable pet and a roaming pet-and-home sitter: periscope camera, treat tossing, alerts. Interactive CAD viewer.">
+<link rel="stylesheet" href="assets/style.css">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 32 32%22%3E%3Crect x=%229%22 y=%224%22 width=%2214%22 height=%2216%22 rx=%225%22 fill=%22%232b2420%22/%3E%3Ccircle cx=%2216%22 cy=%2211%22 r=%224%22 fill=%22%23ffb35c%22/%3E%3Cellipse cx=%2216%22 cy=%2224%22 rx=%2214%22 ry=%227%22 fill=%22%23ecdcc0%22/%3E%3C/svg%3E">
+<script type="importmap">{"imports":{"three":"https://cdn.jsdelivr.net/npm/three@0.170.0/build/three.module.js","three/addons/":"https://cdn.jsdelivr.net/npm/three@0.170.0/examples/jsm/"}}</script>
+</head>
+<body>
+<div id="app">
+  <div id="viewer"><div id="labels"></div><div id="loading">Loading Meerlo&hellip;</div></div>
+
+  <header class="top">
+    <div class="brand"><span class="eye"></span><b>Meerlo</b><span class="ver">CAD v0.1 &middot; design review</span></div>
+    <p class="tag">The pet that pet-sits. A little home robot with a pop-up periscope head that roams the house while you're out, checks on your dog or cat, tosses them treats and tells you what's going on.</p>
+  </header>
+
+  <aside class="panel left">
+    <h3>Views</h3>
+    <div class="btns" id="views">
+      <button data-view="34">3/4</button><button data-view="front">Front</button><button data-view="side">Side</button>
+      <button data-view="back">Back</button><button data-view="top">Top</button><button data-view="under">Under</button>
+    </div>
+    <h3>Periscope</h3>
+    <div class="btns" id="poses">
+      <button data-pose="0" title="Head down: camera hidden behind the brow (privacy)">Asleep</button><button data-pose="30">Roam</button><button data-pose="80">Sentinel</button>
+    </div>
+    <label class="slider">Lift <input id="lift" type="range" min="0" max="80" step="1" value="80"><span id="liftv">80 mm</span></label>
+    <h3>Display</h3>
+    <div class="btns">
+      <button id="xray">X-ray</button><button id="lbls" class="on">Labels</button><button id="demo">Animate</button>
+    </div>
+    <label class="slider">Explode <input id="explode" type="range" min="0" max="1" step="0.01" value="0"></label>
+    <h3>Layers</h3>
+    <div id="layers"></div>
+    <div class="stats" id="stats"></div>
+  </aside>
+
+  <aside class="panel right">
+    <div class="tabs"><button data-tab="concept" class="on">Concept</button><button data-tab="parts">Parts <span id="ncomp"></span></button><button data-tab="build">Build</button></div>
+
+    <section id="tab-concept" class="tab">
+      <p class="lead"><b>One robot, two jobs people already pay for:</b> a pet with a personality, and a pet-and-home sitter that moves.</p>
+      <h3>Why it wins</h3>
+      <ul>
+        <li><b>Real job, real budget.</b> Pet owners already buy fixed treat cameras and pay sitters for drop-in visits. Meerlo does the check-ins every day and can go to whichever room the pet is in.</li>
+        <li><b>The periscope.</b> One motor lifts the head 80 mm, so the camera sees over sofa cushions, toys and beds. Lowered, the brow covers the lens: a privacy shutter you can see, with no extra part.</li>
+        <li><b>Cheap by design.</b> A single ESP32-S3 does the thinking, there is no lidar, 12 molded parts and 4 actuators. That puts the volume BOM around <b id="vb">$44</b> and makes $149 retail workable.</li>
+        <li><b>Lovable on day one.</b> One big expressive eye, ears that hear its name, a glowing belly band, and a meerkat "stand up" when something happens.</li>
+      </ul>
+      <h3>Hero features</h3>
+      <ul class="feat">
+        <li><i>&#9673;</i><span><b>Patrol &amp; check-in</b>: scheduled rounds, then a 10-second clip of each room and pet sent to your phone.</span></li>
+        <li><i>&#9673;</i><span><b>Treat toss</b>: a lift-out 180 ml cup; it drops one treat at a time from its chin, from the app or as a reward.</span></li>
+        <li><i>&#9673;</i><span><b>Sound alerts</b>: barking, glass breaking or the smoke alarm, and it turns toward the sound and raises its head.</span></li>
+        <li><i>&#9673;</i><span><b>Play mode</b>: it runs away so the cat can chase it, chirps, and glows; it stops when the pet loses interest.</span></li>
+        <li><i>&#9673;</i><span><b>Talk &amp; see</b>: two-way audio, night vision, and it follows you or the dog around the house.</span></li>
+        <li><i>&#9673;</i><span><b>Self-docking</b>: it finds the IR beacon, backs onto the spring contacts and charges itself.</span></li>
+      </ul>
+      <h3>Cost</h3>
+      <div class="bom">
+        <div><b id="pb">$184</b><span>prototype BOM<br>hobby parts + printed</span></div>
+        <div><b id="vb2">$44</b><span>volume BOM<br>10k/yr, landed</span></div>
+      </div>
+      <p class="small">Every line, with links and price sources, is in <a href="https://github.com/wjb000/meerlo/blob/main/BOM.md">BOM.md</a>. Volume lines marked "est" still need supplier quotes.</p>
+    </section>
+
+    <section id="tab-parts" class="tab hidden"><div id="clist"></div></section>
+
+    <section id="tab-build" class="tab hidden">
+      <h3>Production design (DFM)</h3>
+      <ul>
+        <li><b>12 molded parts from 11 tools</b>: the wheel hub and its TPU tyre are one 2-shot part, mirrored left and right. Nominal wall is 2.2 mm ABS/PC, and a single horizontal split line is hidden under the light band.</li>
+        <li>The chassis tub has the motor saddles, battery cradle, mast tower, chute and skid molded in, so there are no brackets.</li>
+        <li>The mast is POM with the rack molded in. The lift motor drives it through a stock pinion, and it homes on motor stall, so there's no limit switch.</li>
+        <li>The treat cup is food-contact PP and lifts straight out for the dishwasher. No electronics touch food.</li>
+        <li>One custom 4-layer PCB, assembled on the same SMT line. The camera and eye run on flex cables down the hollow mast.</li>
+        <li>The radio is a pre-certified ESP32-S3 module, so FCC is part 15B only. The cell is a single 18650 (UL 2054) with protection on the board.</li>
+      </ul>
+      <h3>Assembly (8 steps, 8 screws)</h3>
+      <ol>
+        <li>Drop the drive motors into the chassis saddles; push the wheels onto the D-shafts and fit the screws (2).</li>
+        <li>Press in the ball caster, the battery contacts and the charging pads; snap in the cell.</li>
+        <li>Fit the servo on its ribs (2 screws) and the lift motor with its pinion (2 screws).</li>
+        <li>Slide the mast into the tower; plug the head flex cables into the main board.</li>
+        <li>Snap the main board into its slot; connect the sensors, speaker and LED ring.</li>
+        <li>Lay the light band on the tub; lower the top shell over the mast and fit 2 screws.</li>
+        <li>Snap the head (face plate + head shell) onto the mast socket.</li>
+        <li>Drop in the cup and rotor, close the lid, then run the end-of-line test: drive, lift, treat, camera, mics, dock.</li>
+      </ol>
+      <h3>3D-printed prototype</h3>
+      <p class="small">The same CAD prints on any 250 mm printer: PETG shells with 0.6 mm-larger snap clearances, TPU tyres, and a 0.2 mm layer for the rack. STEP and ASCII STL files are in <a href="https://github.com/wjb000/meerlo/tree/main/cad">/cad</a>.</p>
+    </section>
+  </aside>
+
+  <div id="info" class="info hidden"><b id="info-t"></b><span id="info-k"></span><p id="info-d"></p></div>
+  <footer class="note">Design model for review: not yet built or tested. Bought parts are modelled from datasheet dimensions. <a href="https://github.com/wjb000/meerlo">Source, CAD &amp; BOM on GitHub</a></footer>
+</div>
+<script type="module" src="assets/viewer.js"></script>
+</body>
+</html>
