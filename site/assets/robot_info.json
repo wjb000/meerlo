@@ -1,0 +1,1339 @@
+{
+ "summary": {
+  "total_mass_g": 507,
+  "com_mm": [
+   -12.4,
+   0.4,
+   60.4
+  ],
+  "com_with_treats_mm": [
+   -10.7,
+   0.4,
+   60.8
+  ],
+  "front_caster_load_pct": 8.2,
+  "front_caster_load_pct_with_treats": 10.7,
+  "molded_parts": 12,
+  "unique_tools": 11,
+  "length_mm": 173,
+  "width_mm": 145,
+  "height_sleep_mm": 192,
+  "height_sentinel_mm": 272,
+  "static_clashes": 0,
+  "mast_travel_clashes": 0,
+  "components": 57
+ },
+ "joints": {
+  "wheel_l": {
+   "node": "link:wheel_l",
+   "axis": [
+    0,
+    1,
+    0
+   ],
+   "limits": null,
+   "type": "revolute"
+  },
+  "wheel_r": {
+   "node": "link:wheel_r",
+   "axis": [
+    0,
+    1,
+    0
+   ],
+   "limits": null,
+   "type": "revolute"
+  },
+  "mast_lift": {
+   "node": "link:mast",
+   "axis": [
+    0,
+    0,
+    1
+   ],
+   "limits": [
+    0,
+    80.0
+   ],
+   "type": "prismatic"
+  },
+  "treat_rotor": {
+   "node": "link:rotor",
+   "axis": [
+    0,
+    0,
+    1
+   ],
+   "limits": [
+    0,
+    180
+   ],
+   "type": "revolute"
+  }
+ },
+ "items": {
+  "part:chassis": {
+   "title": "Chassis tub",
+   "desc": "One molded tub: floor, motor saddles, battery cradle, mast guide tower, servo ribs, treat chute, anti-tip skid, sensor windows.",
+   "group": "shell",
+   "color": "#5c4b3f",
+   "material": "ABS/PC, warm taupe",
+   "process": "Injection molded (2-plate tool, 2 lifters)",
+   "kind": "molded",
+   "explode": [
+    0,
+    0,
+    0
+   ]
+  },
+  "part:light_band": {
+   "title": "Light band",
+   "desc": "Frosted clear-PC ring on the split line. Glows with the LED ring: mood, status, night-light.",
+   "group": "shell",
+   "color": "#ffd59a",
+   "material": "Clear PC, frosted",
+   "process": "Injection molded",
+   "kind": "molded",
+   "explode": [
+    0,
+    0,
+    34
+   ]
+  },
+  "part:top_shell": {
+   "title": "Top shell",
+   "desc": "Upper body with the head nest, the privacy brow, the treat-cup pocket and the speaker grille all molded in.",
+   "group": "shell",
+   "color": "#ecdcc0",
+   "material": "ABS/PC, sand",
+   "process": "Injection molded (1 slider for the grille)",
+   "kind": "molded",
+   "explode": [
+    0,
+    0,
+    70
+   ]
+  },
+  "part:treat_cup": {
+   "title": "Treat cup",
+   "desc": "Lift-out, dishwasher-safe PP cup, ~180 ml (~120 small kibble treats). Funnel floor feeds the rotor.",
+   "group": "mechanism",
+   "color": "#d9c6a6",
+   "material": "PP, food-contact grade",
+   "process": "Injection molded, dishwasher safe",
+   "kind": "molded",
+   "explode": [
+    0,
+    0,
+    105
+   ]
+  },
+  "part:cup_lid": {
+   "title": "Cup lid",
+   "desc": "Smoke-tint lid that is the top of the body when closed. Snap fit, finger tab underneath.",
+   "group": "shell",
+   "color": "#5a4636",
+   "material": "PC tinted smoke",
+   "process": "Injection molded",
+   "kind": "molded",
+   "explode": [
+    0,
+    0,
+    125
+   ]
+  },
+  "part:rotor": {
+   "title": "Treat rotor",
+   "desc": "Two-pocket acetal rotor: each half-turn of the servo drops one treat down the chute and out of the chin.",
+   "group": "mechanism",
+   "color": "#f2a65a",
+   "material": "POM (acetal)",
+   "process": "Injection molded",
+   "kind": "molded",
+   "explode": [
+    0,
+    0,
+    80
+   ]
+  },
+  "part:mast": {
+   "title": "Periscope mast",
+   "desc": "Hollow POM mast with the rack molded in. Lifts the head 85 mm: asleep, roam, or meerkat \"sentinel\" stance.",
+   "group": "mechanism",
+   "color": "#3d332c",
+   "material": "POM or PA12-GF, rack molded in",
+   "process": "Injection molded",
+   "kind": "molded",
+   "explode": [
+    0,
+    0,
+    60
+   ]
+  },
+  "part:head_rear": {
+   "title": "Head shell",
+   "desc": "Rounded head with two little ears (mic ports) and the mast socket.",
+   "group": "shell",
+   "color": "#ecdcc0",
+   "material": "ABS/PC, sand",
+   "process": "Injection molded",
+   "kind": "molded",
+   "explode": [
+    -30,
+    0,
+    85
+   ]
+  },
+  "part:head_front": {
+   "title": "Face plate",
+   "desc": "Gloss espresso face: eye window with bezel and the camera \"nose\".",
+   "group": "shell",
+   "color": "#2b2420",
+   "material": "ABS/PC, espresso gloss",
+   "process": "Injection molded",
+   "kind": "molded",
+   "explode": [
+    35,
+    0,
+    85
+   ]
+  },
+  "part:wheel_l": {
+   "title": "Wheel hub",
+   "desc": "68 mm wheel, paw-print hubcap; 2-shot molded with its TPU tyre (one part). Climbs rug edges and 12 mm thresholds.",
+   "group": "drivetrain",
+   "color": "#ecdcc0",
+   "material": "ABS hub",
+   "process": "2-shot molded with TPU tyre",
+   "kind": "molded",
+   "explode": [
+    0,
+    45,
+    0
+   ]
+  },
+  "part:tire_l": {
+   "title": "Tyre (TPU overmold)",
+   "desc": "Soft 85A TPU tread with sipes: quiet on hard floors, grips on rugs.",
+   "group": "drivetrain",
+   "color": "#2e2a27",
+   "material": "TPU 85A tyre",
+   "process": "overmold (same part as hub)",
+   "kind": "molded",
+   "explode": [
+    0,
+    45,
+    0
+   ]
+  },
+  "part:wheel_r": {
+   "title": "Wheel hub",
+   "desc": "68 mm wheel, paw-print hubcap; 2-shot molded with its TPU tyre (one part). Climbs rug edges and 12 mm thresholds.",
+   "group": "drivetrain",
+   "color": "#ecdcc0",
+   "material": "ABS hub",
+   "process": "2-shot molded with TPU tyre",
+   "kind": "molded",
+   "explode": [
+    0,
+    -45,
+    0
+   ]
+  },
+  "part:tire_r": {
+   "title": "Tyre (TPU overmold)",
+   "desc": "Soft 85A TPU tread with sipes: quiet on hard floors, grips on rugs.",
+   "group": "drivetrain",
+   "color": "#2e2a27",
+   "material": "TPU 85A tyre",
+   "process": "overmold (same part as hub)",
+   "kind": "molded",
+   "explode": [
+    0,
+    -45,
+    0
+   ]
+  },
+  "part:dock": {
+   "title": "Dock",
+   "desc": "Weighted charging dock: spring contacts, IR beacon, USB-C in. Meerlo backs onto it by itself.",
+   "group": "dock",
+   "color": "#ecdcc0",
+   "material": "ABS, sand, weighted base",
+   "process": "Injection molded",
+   "kind": "molded",
+   "explode": [
+    -70,
+    0,
+    0
+   ]
+  },
+  "elec:motor_l_gearbox": {
+   "title": "Drive gearmotor N20 + encoder",
+   "desc": "N20 metal gearmotor, 6 V, 1:50, 2-channel magnetic encoder (wheel odometry). ~300 rpm at 3.7 V gives 0.5 m/s top speed on 68 mm wheels; 2 per robot.",
+   "group": "drivetrain",
+   "color": "#b9bec6",
+   "kind": "bought",
+   "explode": [
+    0,
+    22,
+    0
+   ],
+   "emissive": false
+  },
+  "elec:motor_l_can": {
+   "title": "Drive gearmotor N20 + encoder",
+   "desc": "N20 metal gearmotor, 6 V, 1:50, 2-channel magnetic encoder (wheel odometry). ~300 rpm at 3.7 V gives 0.5 m/s top speed on 68 mm wheels; 2 per robot.",
+   "group": "drivetrain",
+   "color": "#c9ced6",
+   "kind": "bought",
+   "explode": [
+    0,
+    22,
+    0
+   ],
+   "emissive": false
+  },
+  "elec:motor_l_shaft": {
+   "title": "Drive gearmotor N20 + encoder",
+   "desc": "N20 metal gearmotor, 6 V, 1:50, 2-channel magnetic encoder (wheel odometry). ~300 rpm at 3.7 V gives 0.5 m/s top speed on 68 mm wheels; 2 per robot.",
+   "group": "drivetrain",
+   "color": "#d9dde3",
+   "kind": "bought",
+   "explode": [
+    0,
+    22,
+    0
+   ],
+   "emissive": false
+  },
+  "elec:motor_l_encoder": {
+   "title": "Drive gearmotor N20 + encoder",
+   "desc": "N20 metal gearmotor, 6 V, 1:50, 2-channel magnetic encoder (wheel odometry). ~300 rpm at 3.7 V gives 0.5 m/s top speed on 68 mm wheels; 2 per robot.",
+   "group": "drivetrain",
+   "color": "#1d5f3a",
+   "kind": "bought",
+   "explode": [
+    0,
+    22,
+    0
+   ],
+   "emissive": false
+  },
+  "elec:motor_r_gearbox": {
+   "title": "Drive gearmotor N20 + encoder",
+   "desc": "N20 metal gearmotor, 6 V, 1:50, 2-channel magnetic encoder (wheel odometry). ~300 rpm at 3.7 V gives 0.5 m/s top speed on 68 mm wheels; 2 per robot.",
+   "group": "drivetrain",
+   "color": "#b9bec6",
+   "kind": "bought",
+   "explode": [
+    0,
+    -22,
+    0
+   ],
+   "emissive": false
+  },
+  "elec:motor_r_can": {
+   "title": "Drive gearmotor N20 + encoder",
+   "desc": "N20 metal gearmotor, 6 V, 1:50, 2-channel magnetic encoder (wheel odometry). ~300 rpm at 3.7 V gives 0.5 m/s top speed on 68 mm wheels; 2 per robot.",
+   "group": "drivetrain",
+   "color": "#c9ced6",
+   "kind": "bought",
+   "explode": [
+    0,
+    -22,
+    0
+   ],
+   "emissive": false
+  },
+  "elec:motor_r_shaft": {
+   "title": "Drive gearmotor N20 + encoder",
+   "desc": "N20 metal gearmotor, 6 V, 1:50, 2-channel magnetic encoder (wheel odometry). ~300 rpm at 3.7 V gives 0.5 m/s top speed on 68 mm wheels; 2 per robot.",
+   "group": "drivetrain",
+   "color": "#d9dde3",
+   "kind": "bought",
+   "explode": [
+    0,
+    -22,
+    0
+   ],
+   "emissive": false
+  },
+  "elec:motor_r_encoder": {
+   "title": "Drive gearmotor N20 + encoder",
+   "desc": "N20 metal gearmotor, 6 V, 1:50, 2-channel magnetic encoder (wheel odometry). ~300 rpm at 3.7 V gives 0.5 m/s top speed on 68 mm wheels; 2 per robot.",
+   "group": "drivetrain",
+   "color": "#1d5f3a",
+   "kind": "bought",
+   "explode": [
+    0,
+    -22,
+    0
+   ],
+   "emissive": false
+  },
+  "elec:liftmotor_gearbox": {
+   "title": "Periscope lift motor N20",
+   "desc": "N20 gearmotor 1:150 (no encoder). Drives a 12-tooth pinion on the mast rack: 80 mm of stroke in ~1.5 s. Position from motor-current end-stop homing + time.",
+   "group": "mechanism",
+   "color": "#b9bec6",
+   "kind": "bought",
+   "explode": [
+    0.0,
+    30.0,
+    20.0
+   ],
+   "emissive": false
+  },
+  "elec:liftmotor_can": {
+   "title": "Periscope lift motor N20",
+   "desc": "N20 gearmotor 1:150 (no encoder). Drives a 12-tooth pinion on the mast rack: 80 mm of stroke in ~1.5 s. Position from motor-current end-stop homing + time.",
+   "group": "mechanism",
+   "color": "#c9ced6",
+   "kind": "bought",
+   "explode": [
+    0.0,
+    30.0,
+    20.0
+   ],
+   "emissive": false
+  },
+  "elec:liftmotor_shaft": {
+   "title": "Periscope lift motor N20",
+   "desc": "N20 gearmotor 1:150 (no encoder). Drives a 12-tooth pinion on the mast rack: 80 mm of stroke in ~1.5 s. Position from motor-current end-stop homing + time.",
+   "group": "mechanism",
+   "color": "#d9dde3",
+   "kind": "bought",
+   "explode": [
+    0.0,
+    30.0,
+    20.0
+   ],
+   "emissive": false
+  },
+  "elec:pinion": {
+   "title": "Mast pinion (POM, m1 z12)",
+   "desc": "Stock 12-tooth module-1 POM pinion pressed on the lift motor D-shaft.",
+   "group": "mechanism",
+   "color": "#f2a65a",
+   "kind": "bought",
+   "explode": [
+    0.0,
+    30.0,
+    20.0
+   ],
+   "emissive": false
+  },
+  "elec:servo": {
+   "title": "Treat servo (SG90-class)",
+   "desc": "9 g micro servo, 180 deg. Swings the two-pocket rotor: each half turn drops exactly one treat into the chute.",
+   "group": "mechanism",
+   "color": "#3f6fb5",
+   "kind": "bought",
+   "explode": [
+    0.0,
+    0.0,
+    22.0
+   ],
+   "emissive": false
+  },
+  "elec:battery": {
+   "title": "18650 Li-ion cell 3000 mAh",
+   "desc": "One protected 18650 cell (3.6 V, ~10.8 Wh), UL 2054 / UN38.3. ~3 h roaming or 24 h+ on watch, docked.",
+   "group": "power",
+   "color": "#2f62a8",
+   "kind": "bought",
+   "explode": [
+    -30.0,
+    0.0,
+    -4.0
+   ],
+   "emissive": false
+  },
+  "elec:bclip_l": {
+   "title": "Battery contacts",
+   "desc": "Nickel-plated spring contacts pressed into the chassis cradle.",
+   "group": "power",
+   "color": "#cfd3d8",
+   "kind": "bought",
+   "explode": [
+    -30.0,
+    0.0,
+    -4.0
+   ],
+   "emissive": false
+  },
+  "elec:bclip_r": {
+   "title": "Battery contacts",
+   "desc": "Nickel-plated spring contacts pressed into the chassis cradle.",
+   "group": "power",
+   "color": "#cfd3d8",
+   "kind": "bought",
+   "explode": [
+    -30.0,
+    0.0,
+    -4.0
+   ],
+   "emissive": false
+  },
+  "elec:pcb": {
+   "title": "Main board (4-layer, 70x40 mm)",
+   "desc": "Single PCB: ESP32-S3 module, 2x DRV8833 motor drivers, 6-axis IMU, Li-ion charger + protection, I2S amp, LED driver, all connectors. Assembled on the same SMT line as the rest.",
+   "group": "electronics",
+   "color": "#1c3b2c",
+   "kind": "bought",
+   "explode": [
+    0.0,
+    0.0,
+    40.0
+   ],
+   "emissive": false
+  },
+  "elec:esp32": {
+   "title": "ESP32-S3-WROOM-1 N8R8",
+   "desc": "Dual-core 240 MHz + vector AI instructions, 8 MB flash, 8 MB PSRAM, Wi-Fi 4 + BLE 5, FCC/CE-certified module. Runs navigation, on-device pet/person/sound detection and the camera stream.",
+   "group": "electronics",
+   "color": "#9aa3ad",
+   "kind": "bought",
+   "explode": [
+    -12.0,
+    0.0,
+    40.0
+   ],
+   "emissive": false
+  },
+  "elec:ic0": {
+   "title": "DRV8833 motor driver (x2)",
+   "desc": "TI DRV8833, dual H-bridge, 1.5 A/ch: one for the wheels, one for the lift motor + spare.",
+   "group": "electronics",
+   "color": "#222",
+   "kind": "bought",
+   "explode": [
+    -12.0,
+    0.0,
+    40.0
+   ],
+   "emissive": false
+  },
+  "elec:ic1": {
+   "title": "DRV8833 motor driver (x2)",
+   "desc": "TI DRV8833, dual H-bridge, 1.5 A/ch: one for the wheels, one for the lift motor + spare.",
+   "group": "electronics",
+   "color": "#222",
+   "kind": "bought",
+   "explode": [
+    -12.0,
+    0.0,
+    40.0
+   ],
+   "emissive": false
+  },
+  "elec:ic2": {
+   "title": "IMU (6-axis)",
+   "desc": "QMI8658 / ICM-42670-class accel + gyro: tilt, bump, pick-up and stuck detection.",
+   "group": "electronics",
+   "color": "#222",
+   "kind": "bought",
+   "explode": [
+    -12.0,
+    0.0,
+    40.0
+   ],
+   "emissive": false
+  },
+  "elec:ic3": {
+   "title": "Li-ion charger + protector",
+   "desc": "1.5 A linear charger + DW01 protector + NTC: charges from the dock pads in ~2.5 h.",
+   "group": "electronics",
+   "color": "#222",
+   "kind": "bought",
+   "explode": [
+    -12.0,
+    0.0,
+    40.0
+   ],
+   "emissive": false
+  },
+  "elec:ic4": {
+   "title": "MAX98357A I2S amp",
+   "desc": "3 W class-D I2S amplifier for voice, chirps and your recorded \"good boy\".",
+   "group": "electronics",
+   "color": "#222",
+   "kind": "bought",
+   "explode": [
+    -12.0,
+    0.0,
+    40.0
+   ],
+   "emissive": false
+  },
+  "elec:tof": {
+   "title": "Front ToF ranger VL53L1X",
+   "desc": "ST VL53L1X time-of-flight, 4 m, 27 deg FoV, multi-zone ROI scan: obstacle + wall following behind an IR window.",
+   "group": "sensors",
+   "color": "#7a2fa0",
+   "kind": "bought",
+   "explode": [
+    30.0,
+    0.0,
+    0.0
+   ],
+   "emissive": false
+  },
+  "elec:cliff_fl": {
+   "title": "Cliff sensor ITR8307 (x3)",
+   "desc": "Reflective IR pair looking at the floor: stops before stairs and table edges.",
+   "group": "sensors",
+   "color": "#7a2fa0",
+   "kind": "bought",
+   "explode": [
+    0.0,
+    0.0,
+    -18.0
+   ],
+   "emissive": false
+  },
+  "elec:cliff_fr": {
+   "title": "Cliff sensor ITR8307 (x3)",
+   "desc": "Reflective IR pair looking at the floor: stops before stairs and table edges.",
+   "group": "sensors",
+   "color": "#7a2fa0",
+   "kind": "bought",
+   "explode": [
+    0.0,
+    0.0,
+    -18.0
+   ],
+   "emissive": false
+  },
+  "elec:cliff_rr": {
+   "title": "Cliff sensor ITR8307 (x3)",
+   "desc": "Reflective IR pair looking at the floor: stops before stairs and table edges.",
+   "group": "sensors",
+   "color": "#7a2fa0",
+   "kind": "bought",
+   "explode": [
+    0.0,
+    0.0,
+    -18.0
+   ],
+   "emissive": false
+  },
+  "elec:irrx": {
+   "title": "Dock-homing IR receiver",
+   "desc": "38 kHz IR receiver at the rear: finds the dock beacon and backs straight onto the charging pads.",
+   "group": "sensors",
+   "color": "#7a2fa0",
+   "kind": "bought",
+   "explode": [
+    -30.0,
+    0.0,
+    0.0
+   ],
+   "emissive": false
+  },
+  "elec:camera": {
+   "title": "Camera OV3660 (3 MP, 120 deg)",
+   "desc": "Wide-angle 3 MP camera on a 24-pin FPC that runs down the hollow mast. Night mode with the IR-cut-free lens + 2 IR LEDs. Hidden behind the brow when Meerlo is asleep: a real privacy shutter.",
+   "group": "sensors",
+   "color": "#7a2fa0",
+   "kind": "bought",
+   "explode": [
+    55.0,
+    0.0,
+    80.0
+   ],
+   "emissive": false
+  },
+  "elec:fpc": {
+   "title": "Camera/eye flex cable",
+   "desc": "24-pin camera FPC + eye cable, routed down the mast channel with a 90 mm rolling service loop.",
+   "group": "electronics",
+   "color": "#c88a2a",
+   "kind": "bought",
+   "explode": [
+    0.0,
+    0.0,
+    60.0
+   ],
+   "emissive": false
+  },
+  "elec:mic_l": {
+   "title": "MEMS microphones (x2, in the ears)",
+   "desc": "Two I2S MEMS mics: bark/meow/glass-break/smoke-alarm detection, direction of sound, two-way talk.",
+   "group": "sensors",
+   "color": "#7a2fa0",
+   "kind": "bought",
+   "explode": [
+    -30.0,
+    0.0,
+    95.0
+   ],
+   "emissive": false
+  },
+  "elec:mic_r": {
+   "title": "MEMS microphones (x2, in the ears)",
+   "desc": "Two I2S MEMS mics: bark/meow/glass-break/smoke-alarm detection, direction of sound, two-way talk.",
+   "group": "sensors",
+   "color": "#7a2fa0",
+   "kind": "bought",
+   "explode": [
+    -30.0,
+    0.0,
+    95.0
+   ],
+   "emissive": false
+  },
+  "elec:irled_l": {
+   "title": "Night-vision IR LEDs (x2)",
+   "desc": "850 nm IR LEDs either side of the camera for seeing in the dark.",
+   "group": "sensors",
+   "color": "#5a1f70",
+   "kind": "bought",
+   "explode": [
+    55.0,
+    0.0,
+    80.0
+   ],
+   "emissive": false
+  },
+  "elec:irled_r": {
+   "title": "Night-vision IR LEDs (x2)",
+   "desc": "850 nm IR LEDs either side of the camera for seeing in the dark.",
+   "group": "sensors",
+   "color": "#5a1f70",
+   "kind": "bought",
+   "explode": [
+    55.0,
+    0.0,
+    80.0
+   ],
+   "emissive": false
+  },
+  "elec:lcd": {
+   "title": "Round eye display 1.28\" GC9A01",
+   "desc": "240x240 round IPS (32.4 mm active), SPI. One big expressive eye: sleepy, curious, alert, happy.",
+   "group": "expression",
+   "color": "#101418",
+   "kind": "bought",
+   "explode": [
+    55.0,
+    0.0,
+    85.0
+   ],
+   "emissive": false
+  },
+  "elec:speaker": {
+   "title": "Speaker 20x30 mm, 1 W",
+   "desc": "8 ohm 1 W oval speaker firing through the rear grille.",
+   "group": "expression",
+   "color": "#2a2a2a",
+   "kind": "bought",
+   "explode": [
+    -40.0,
+    0.0,
+    70.0
+   ],
+   "emissive": false
+  },
+  "elec:led0": {
+   "title": "RGB LEDs WS2812B-2020 (x12)",
+   "desc": "12 addressable RGB LEDs on a flex ring behind the frosted band: mood, status, night-light, \"follow me\" glow.",
+   "group": "expression",
+   "color": "#ffcf8a",
+   "kind": "bought",
+   "explode": [
+    0.0,
+    0.0,
+    34.0
+   ],
+   "emissive": true
+  },
+  "elec:led1": {
+   "title": "RGB LEDs WS2812B-2020 (x12)",
+   "desc": "12 addressable RGB LEDs on a flex ring behind the frosted band: mood, status, night-light, \"follow me\" glow.",
+   "group": "expression",
+   "color": "#ffcf8a",
+   "kind": "bought",
+   "explode": [
+    0.0,
+    0.0,
+    34.0
+   ],
+   "emissive": true
+  },
+  "elec:led2": {
+   "title": "RGB LEDs WS2812B-2020 (x12)",
+   "desc": "12 addressable RGB LEDs on a flex ring behind the frosted band: mood, status, night-light, \"follow me\" glow.",
+   "group": "expression",
+   "color": "#ffcf8a",
+   "kind": "bought",
+   "explode": [
+    0.0,
+    0.0,
+    34.0
+   ],
+   "emissive": true
+  },
+  "elec:led3": {
+   "title": "RGB LEDs WS2812B-2020 (x12)",
+   "desc": "12 addressable RGB LEDs on a flex ring behind the frosted band: mood, status, night-light, \"follow me\" glow.",
+   "group": "expression",
+   "color": "#ffcf8a",
+   "kind": "bought",
+   "explode": [
+    0.0,
+    0.0,
+    34.0
+   ],
+   "emissive": true
+  },
+  "elec:led4": {
+   "title": "RGB LEDs WS2812B-2020 (x12)",
+   "desc": "12 addressable RGB LEDs on a flex ring behind the frosted band: mood, status, night-light, \"follow me\" glow.",
+   "group": "expression",
+   "color": "#ffcf8a",
+   "kind": "bought",
+   "explode": [
+    0.0,
+    0.0,
+    34.0
+   ],
+   "emissive": true
+  },
+  "elec:led5": {
+   "title": "RGB LEDs WS2812B-2020 (x12)",
+   "desc": "12 addressable RGB LEDs on a flex ring behind the frosted band: mood, status, night-light, \"follow me\" glow.",
+   "group": "expression",
+   "color": "#ffcf8a",
+   "kind": "bought",
+   "explode": [
+    0.0,
+    0.0,
+    34.0
+   ],
+   "emissive": true
+  },
+  "elec:led6": {
+   "title": "RGB LEDs WS2812B-2020 (x12)",
+   "desc": "12 addressable RGB LEDs on a flex ring behind the frosted band: mood, status, night-light, \"follow me\" glow.",
+   "group": "expression",
+   "color": "#ffcf8a",
+   "kind": "bought",
+   "explode": [
+    0.0,
+    0.0,
+    34.0
+   ],
+   "emissive": true
+  },
+  "elec:led7": {
+   "title": "RGB LEDs WS2812B-2020 (x12)",
+   "desc": "12 addressable RGB LEDs on a flex ring behind the frosted band: mood, status, night-light, \"follow me\" glow.",
+   "group": "expression",
+   "color": "#ffcf8a",
+   "kind": "bought",
+   "explode": [
+    0.0,
+    0.0,
+    34.0
+   ],
+   "emissive": true
+  },
+  "elec:led8": {
+   "title": "RGB LEDs WS2812B-2020 (x12)",
+   "desc": "12 addressable RGB LEDs on a flex ring behind the frosted band: mood, status, night-light, \"follow me\" glow.",
+   "group": "expression",
+   "color": "#ffcf8a",
+   "kind": "bought",
+   "explode": [
+    0.0,
+    0.0,
+    34.0
+   ],
+   "emissive": true
+  },
+  "elec:led9": {
+   "title": "RGB LEDs WS2812B-2020 (x12)",
+   "desc": "12 addressable RGB LEDs on a flex ring behind the frosted band: mood, status, night-light, \"follow me\" glow.",
+   "group": "expression",
+   "color": "#ffcf8a",
+   "kind": "bought",
+   "explode": [
+    0.0,
+    0.0,
+    34.0
+   ],
+   "emissive": true
+  },
+  "elec:led10": {
+   "title": "RGB LEDs WS2812B-2020 (x12)",
+   "desc": "12 addressable RGB LEDs on a flex ring behind the frosted band: mood, status, night-light, \"follow me\" glow.",
+   "group": "expression",
+   "color": "#ffcf8a",
+   "kind": "bought",
+   "explode": [
+    0.0,
+    0.0,
+    34.0
+   ],
+   "emissive": true
+  },
+  "elec:led11": {
+   "title": "RGB LEDs WS2812B-2020 (x12)",
+   "desc": "12 addressable RGB LEDs on a flex ring behind the frosted band: mood, status, night-light, \"follow me\" glow.",
+   "group": "expression",
+   "color": "#ffcf8a",
+   "kind": "bought",
+   "explode": [
+    0.0,
+    0.0,
+    34.0
+   ],
+   "emissive": true
+  },
+  "elec:caster": {
+   "title": "Ball caster 1/2\"",
+   "desc": "Ball caster with a 12.7 mm steel ball. 3-point stance: two wheels + this ball, plus a rear anti-tip skid.",
+   "group": "drivetrain",
+   "color": "#9aa1ab",
+   "kind": "bought",
+   "explode": [
+    0.0,
+    0.0,
+    -30.0
+   ],
+   "emissive": false
+  },
+  "elec:pad_l": {
+   "title": "Charging pads (robot side)",
+   "desc": "Two gold-plated contact pads at the rear; the dock springs press on them.",
+   "group": "power",
+   "color": "#d4a64a",
+   "kind": "bought",
+   "explode": [
+    -30.0,
+    0.0,
+    0.0
+   ],
+   "emissive": false
+  },
+  "elec:pad_r": {
+   "title": "Charging pads (robot side)",
+   "desc": "Two gold-plated contact pads at the rear; the dock springs press on them.",
+   "group": "power",
+   "color": "#d4a64a",
+   "kind": "bought",
+   "explode": [
+    -30.0,
+    0.0,
+    0.0
+   ],
+   "emissive": false
+  },
+  "elec:axle_l": {
+   "title": "Wheel fasteners",
+   "desc": "M2.5 screw + washer holding each wheel on the D-shaft.",
+   "group": "drivetrain",
+   "color": "#9aa1ab",
+   "kind": "bought",
+   "explode": [
+    0,
+    52,
+    0
+   ],
+   "emissive": false
+  },
+  "elec:axle_r": {
+   "title": "Wheel fasteners",
+   "desc": "M2.5 screw + washer holding each wheel on the D-shaft.",
+   "group": "drivetrain",
+   "color": "#9aa1ab",
+   "kind": "bought",
+   "explode": [
+    0,
+    -52,
+    0
+   ],
+   "emissive": false
+  },
+  "elec:dock_pcb": {
+   "title": "Dock board + USB-C",
+   "desc": "Tiny dock PCB: USB-C 5 V in, reverse/short protection, 38 kHz beacon driver.",
+   "group": "dock",
+   "color": "#1c3b2c",
+   "kind": "bought",
+   "explode": [
+    -70.0,
+    0.0,
+    0.0
+   ],
+   "emissive": false
+  },
+  "elec:dock_spring_l": {
+   "title": "Dock spring contacts",
+   "desc": "Gold-plated leaf springs with 4 mm of travel: tolerant of a few mm docking error.",
+   "group": "dock",
+   "color": "#d4a64a",
+   "kind": "bought",
+   "explode": [
+    -70.0,
+    0.0,
+    0.0
+   ],
+   "emissive": false
+  },
+  "elec:dock_spring_r": {
+   "title": "Dock spring contacts",
+   "desc": "Gold-plated leaf springs with 4 mm of travel: tolerant of a few mm docking error.",
+   "group": "dock",
+   "color": "#d4a64a",
+   "kind": "bought",
+   "explode": [
+    -70.0,
+    0.0,
+    0.0
+   ],
+   "emissive": false
+  },
+  "elec:beacon": {
+   "title": "IR beacon LEDs",
+   "desc": "Two 940 nm LEDs behind the window broadcast the dock code the robot homes on.",
+   "group": "dock",
+   "color": "#5a1f70",
+   "kind": "bought",
+   "explode": [
+    -70.0,
+    0.0,
+    0.0
+   ],
+   "emissive": true
+  }
+ },
+ "labels": [
+  {
+   "key": "part:chassis",
+   "node": "link:base",
+   "local": [
+    60.0,
+    -50.0,
+    22.0
+   ]
+  },
+  {
+   "key": "part:light_band",
+   "node": "link:base",
+   "local": [
+    40.0,
+    50.0,
+    47.0
+   ]
+  },
+  {
+   "key": "part:top_shell",
+   "node": "link:base",
+   "local": [
+    -60.0,
+    -40.0,
+    90.0
+   ]
+  },
+  {
+   "key": "part:treat_cup",
+   "node": "link:base",
+   "local": [
+    23.0,
+    0.0,
+    80.0
+   ]
+  },
+  {
+   "key": "part:cup_lid",
+   "node": "link:base",
+   "local": [
+    23.0,
+    10.0,
+    110.0
+   ]
+  },
+  {
+   "key": "part:rotor",
+   "node": "link:rotor",
+   "local": [
+    -2.0,
+    8.0,
+    4.0
+   ]
+  },
+  {
+   "key": "part:mast",
+   "node": "link:mast",
+   "local": [
+    0.0,
+    0.0,
+    100.0
+   ]
+  },
+  {
+   "key": "part:head_rear",
+   "node": "link:mast",
+   "local": [
+    -5.0,
+    25.0,
+    150.0
+   ]
+  },
+  {
+   "key": "part:head_front",
+   "node": "link:mast",
+   "local": [
+    25.0,
+    -20.0,
+    160.0
+   ]
+  },
+  {
+   "key": "part:wheel_l",
+   "node": "link:wheel_l",
+   "local": [
+    2.0,
+    8.0,
+    16.0
+   ]
+  },
+  {
+   "key": "part:tire_r",
+   "node": "link:wheel_r",
+   "local": [
+    2.0,
+    -8.0,
+    -26.0
+   ]
+  },
+  {
+   "key": "part:dock",
+   "node": "link:dock",
+   "local": [
+    -198.0,
+    -50.0,
+    50.0
+   ]
+  },
+  {
+   "key": "elec:motor_l_can",
+   "node": "link:base",
+   "local": [
+    -18.0,
+    33.5,
+    34.0
+   ]
+  },
+  {
+   "key": "elec:liftmotor_can",
+   "node": "link:base",
+   "local": [
+    -30.0,
+    23.6,
+    70.5
+   ]
+  },
+  {
+   "key": "elec:pinion",
+   "node": "link:base",
+   "local": [
+    -30.0,
+    18.4,
+    100.0
+   ]
+  },
+  {
+   "key": "elec:servo",
+   "node": "link:base",
+   "local": [
+    22.0,
+    -5.550000000000001,
+    40.0
+   ]
+  },
+  {
+   "key": "elec:battery",
+   "node": "link:base",
+   "local": [
+    -62.0,
+    0.0,
+    18.49440614548515
+   ]
+  },
+  {
+   "key": "elec:pcb",
+   "node": "link:base",
+   "local": [
+    -12.0,
+    0.0,
+    70.0
+   ]
+  },
+  {
+   "key": "elec:esp32",
+   "node": "link:base",
+   "local": [
+    -14.4,
+    0.0,
+    77.25
+   ]
+  },
+  {
+   "key": "elec:ic0",
+   "node": "link:base",
+   "local": [
+    -13.2,
+    -24.0,
+    58.0
+   ]
+  },
+  {
+   "key": "elec:ic2",
+   "node": "link:base",
+   "local": [
+    -13.2,
+    18.0,
+    70.0
+   ]
+  },
+  {
+   "key": "elec:ic3",
+   "node": "link:base",
+   "local": [
+    -13.2,
+    24.0,
+    58.0
+   ]
+  },
+  {
+   "key": "elec:ic4",
+   "node": "link:base",
+   "local": [
+    -13.2,
+    18.0,
+    58.0
+   ]
+  },
+  {
+   "key": "elec:tof",
+   "node": "link:base",
+   "local": [
+    80.7,
+    0.0,
+    37.0
+   ]
+  },
+  {
+   "key": "elec:cliff_fl",
+   "node": "link:base",
+   "local": [
+    40.0,
+    26.0,
+    8.8
+   ]
+  },
+  {
+   "key": "elec:irrx",
+   "node": "link:base",
+   "local": [
+    -79.5,
+    0.0,
+    34.0
+   ]
+  },
+  {
+   "key": "elec:camera",
+   "node": "link:mast",
+   "local": [
+    20.6,
+    0.0,
+    131.0
+   ]
+  },
+  {
+   "key": "elec:mic_l",
+   "node": "link:mast",
+   "local": [
+    -3.0,
+    19.0,
+    174.5
+   ]
+  },
+  {
+   "key": "elec:lcd",
+   "node": "link:mast",
+   "local": [
+    20.200000000000003,
+    0.0,
+    154.0
+   ]
+  },
+  {
+   "key": "elec:speaker",
+   "node": "link:base",
+   "local": [
+    -76.5654095050366,
+    0.5631275081749001,
+    68.9341355204638
+   ]
+  },
+  {
+   "key": "elec:led1",
+   "node": "link:base",
+   "local": [
+    67.54998149518622,
+    22.999999999999996,
+    47.0
+   ]
+  },
+  {
+   "key": "elec:caster",
+   "node": "link:base",
+   "local": [
+    50.00528308481958,
+    0.0,
+    6.35
+   ]
+  },
+  {
+   "key": "elec:pad_l",
+   "node": "link:base",
+   "local": [
+    -80.5,
+    8.0,
+    21.5
+   ]
+  },
+  {
+   "key": "elec:dock_pcb",
+   "node": "link:dock",
+   "local": [
+    -203.2,
+    0.0,
+    17.0
+   ]
+  },
+  {
+   "key": "elec:dock_spring_l",
+   "node": "link:dock",
+   "local": [
+    -170.75,
+    8.0,
+    21.5
+   ]
+  },
+  {
+   "key": "elec:beacon",
+   "node": "link:dock",
+   "local": [
+    -186.0,
+    0.0,
+    36.00155384847635
+   ]
+  }
+ ]
+}
